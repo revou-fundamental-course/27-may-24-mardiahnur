@@ -1,0 +1,112 @@
+/* ini css */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color:bisque;
+
+}
+
+nav>section{
+    display: flex;
+    align-items: center;
+}
+
+hr{
+    border: 1px solid beige
+}
+
+.logo-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url(https://picsum.photos/200);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav-item {
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
+}
+
+.selection-container {
+    background-color:bisque;
+    
+}
+
+.banner-container {
+    height: 258px;
+    background-image: url(../css/image/mutasi.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sop-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+
+}
+.logo-icon1 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url(../css/image/Persyaratan.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo-icon2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url(../css/image/images\ 2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo-icon3 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url(../css/image/image\ 3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-result {
+    height: 100px;
+    border: 1px solid black
+}
+
+.message-us-section {
+    display: flex;
+}
+
+article.form table .table-row{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin-bottom: 10px;
+}
+article.form table .table-row td.label{
+    width: 150px;
+}
+article.form table .table-row td.input-table{
+    margin-left: 5px;
+}
+article.form table .table-row td.input-table .input-text{
+    width: 200px;
+}
+article.form input#btn-submit{
+    width: 100%;
+}
+
+.result-container {
+    width: 100%
+}
