@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>infografis mutasi</title>
     <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 <body>
     <nav>
@@ -13,7 +14,7 @@
         <section>
             <a class="nav-item" href="#home">Home</a>
             <a class="nav-item" href="#sop">SOP</a>
-            <a class="nav-item">Profil</a>
+            <a class="nav-item">Profile</a>
             <a class="nav-item" href="#message-us">Message us</a>
         </section>
     </nav>
@@ -23,12 +24,15 @@
         <!-- Home -->
         <section id="home">
             <header>
-                <h1>Hi, Selamat datang dilayanan mutasi pegawai </h1>
+                <h1>Hi, <span id="name">Rahmi</span></h1>
             </header>
             <article>
-                <p>Mutasi Pegawai adalah.........</p>
+                <p>Welcome to the employee transfer services. Here, you can find information and services related to the employee transfer process. Please use the form below to submit any questions or requests regarding employee transfers</p>
+                <script src="js/script.js"></script>
                     <div class="banner-container">
-
+                        <div class="banner-img" style="background-image: url(../27-may-24-mardiahnur/css/image/pns.png);"></div>
+                        <div class="banner-img" style="background-image: url(../27-may-24-mardiahnur/css/image/ASN.jpg);"></div>
+                        <div class="banner-img" style="background-image: url(../27-may-24-mardiahnur/css/image/khaki.jpeg);"></div>
                     </div>
             </article>
         </section>
@@ -38,30 +42,28 @@
         <!-- sop -->
         <section id="sop">
             <header>
-                <h1>STANDAR LAYANAN OPERASIONAL</h1>
+                <h1>Operational Service Standards</h1>
             </header>
 
             <article class="sop-list">
                 <div class="logo-icon1">
-                    <div style="width: 50px; height: 50px; border: 1px solid black; border-radius: 50%;"></div>
-                    <h5>PERSYARATAN</h5>
+                    <div style="width: 50px; height: 50px; border-radius: 50%;"></div>
+                    <h5>Requirements</h5>
+                    <div style="text-align: justify;"> </div>
                 </div>
 
                 <div class="logo-icon2">
-                    <div style="width: 50px; height: 50px; border: 1px solid black; border-radius: 50%;"></div>
-                    <h5>PROSEDUR</h5>
+                    <div style="width: 50px; height: 50px;  border-radius: 50%;"></div>
+                    <h5>Procedure</h5>
                 </div>
 
                 <div class="logo-icon3">
-                    <div style="width: 50px; height: 50px; border: 1px solid black; border-radius: 50%;"></div>
-                    <h5>KETENTUAN</h5>
+                    <div style="width: 50px; height: 50px; border-radius: 50%;"></div>
+                    <h5>Provision</h5>
                 </div>
                
             </article>
         </section>
-
-        <!-- Reference
-        <section></section> -->
 
         <hr>
 
@@ -69,60 +71,69 @@
         <section id="message-us">
             <header>
                 <h1>Message us</h1>
+                <h5>If you have any questions or would like to submit a transfer request, please fill out the form below. Our team will contact you promptly to provide further information and assist you with the transfer process.</h5>
             </header>
 
             <section class="message-us-section">
                 <!-- form -->
                 <section>
-                    <!-- <form action="" method=""> -->
                     <article class="form">
-                        <table>
-                            <tr class="table-row">
-                                <td class="label">Nama</td>
-                                <td>:</td>
-                                <td class="input-table"><input id="name" type="text" class="input-text"></input></td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="label">Tanggal Lahir</td>
-                                <td>:</td>
-                                <td class="input-table"><input id="Tanggal" type="date" class="input-text"></input></td>
-                            </tr>
-                            <tr class="table-row">
-                                <td class="label">Jenis Kelamin</td>
-                                <td>:</td>
-                                <td class="input-table"><input id="laki-laki" type="radio" value="laki-laki" name="Jenis Kelamin"></input>
-                                <label for="laki-laki">laki-laki</label>
-                                <input id="perempuan" type="radio" value="perempuan" name="Jenis Kelamin"></input>
-                                <label for="perempuan">perempuan</label>
-                                </td>
-                            </tr>
-            
-                            <tr class="table-row"> 
-                                <td class="label">Pesan</td>
-                                <td>:</td>
-                                <td class="input-table"><textarea placeholder="Ketik disini" class="input-text"></textarea></td>
-                            </tr>
-                        </table>
-                        <input type="submit" id="btn-submit" name="submit" align-items: center;>
+                        <form id="messageForm" onsubmit="return validateForm()">
+                            <table>
+                                <tr class="table-row">
+                                    <td class="label">Full Name</td>
+                                    <td>:</td>
+                                    <td class="input-table"><input id="full-name" name="full-name" type="text" class="input-text"></td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="label">NIP</td>
+                                    <td>:</td>
+                                    <td class="input-table"><input id="nip" name="nip" type="tel" class="input-text" placeholder="Nomor Induk Kepegawaian"></td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="label">Birth Date</td>
+                                    <td>:</td>
+                                    <td class="input-table"><input id="birth-date" name="birth-date" type="date" class="input-text"></td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="label">Gender</td>
+                                    <td>:</td>
+                                    <td class="input-table">
+                                        <input id="male" type="radio" value="male" name="gender">
+                                        <label for="male">male</label>
+                                        <input id="female" type="radio" value="female" name="gender">
+                                        <label for="female">female</label>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="label">Messages</td>
+                                    <td>:</td>
+                                    <td class="input-table"><textarea id="messages" name="messages" placeholder="your message" class="input-text"></textarea></td>
+                                </tr>
+                            </table>
+                            <input type="submit" id="btn-submit" name="submit">
+                        </form>
                     </article>    
-                        <!-- </table> -->
-                        <!-- <label>Name:</label>
-                        <input /> -->
-                    <!-- </form> -->
-                </section>
-                <!-- result -->
-                <section class="result-container">
-                    <div class="form-result">
-
-                    </div>
-                </section>
+                    
+                    <section class="result-container">
+                        <div class="form-result">
+                            <p>Full Name: <span id="sender-full-name"></span></p>
+                            <p>NIP: <span id="sender-NIP"></span></p>
+                            <p>Birth Date: <span id="sender-birth-date"></span></p>
+                            <p>Gender: <span id="sender-gender"></span></p>
+                            <p>Messages: <span id="sender-messages"></span></p>
+                        </div>
+                    </section>   
             </section>
         </section>
 
     </section>
-
+    <hr>
     <footer>
-
+        <p>&copy; 2024 Mardiah Nur Rahmi. Semua hak cipta dilindungi.</p>
+        <p><a href="#privacy-policy">Kebijakan Privasi</a> | <a href="#terms-of-service">Syarat dan Ketentuan</a></p>
     </footer>
+    
+    
 </body>
 </html>

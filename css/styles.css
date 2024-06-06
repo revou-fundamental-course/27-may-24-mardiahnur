@@ -16,6 +16,17 @@ hr{
     border: 1px solid beige
 }
 
+
+p {
+    margin-left: 13px;
+    margin-top: 3px;
+}
+
+header{
+    margin-left: 13px;
+    margin-top: 3px;
+}
+
 .logo-icon {
     height: 50px;
     width: 50px;
@@ -24,6 +35,8 @@ hr{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+
 
 .nav-item {
     border: 1px solid black;
@@ -40,9 +53,19 @@ hr{
 
 .banner-container {
     height: 258px;
-    background-image: url(../css/image/mutasi.jpeg);
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-img {
+    height: 100%;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .sop-list {
@@ -50,8 +73,12 @@ hr{
     flex-direction: row;
     justify-content: space-around;
     align-items: baseline;
-
+    height: 130px;
+    width: auto;
+    align-items: normal;
 }
+
+
 .logo-icon1 {
     height: 50px;
     width: 50px;
@@ -79,34 +106,50 @@ hr{
     background-repeat: no-repeat;
 }
 
-.form-result {
-    height: 100px;
-    border: 1px solid black
-}
+@media (max-width: 768px) {
 
-.message-us-section {
-    display: flex;
-}
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
 
-article.form table .table-row{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    margin-bottom: 10px;
+    .message-us-section {
+        display: flex;
+    }
 }
-article.form table .table-row td.label{
-    width: 150px;
-}
-article.form table .table-row td.input-table{
-    margin-left: 5px;
-}
-article.form table .table-row td.input-table .input-text{
-    width: 200px;
-}
-article.form input#btn-submit{
-    width: 100%;
-}
+    article.form table .table-row td.input-table .input-text {
+        width: 180px;
+        height: 30px;
+        padding: 2px 3px;
+    }
 
-.result-container {
-    width: 100%
-}
+    article.form input#btn-submit{
+        width: 271px;
+        padding: 5px 10px;
+        color: rgb(12, 12, 12);
+        background: linear-gradient(to right, #4CAF50, #81C784);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+        margin-left: 13px;
+    }
+
+    .form-result {
+        height: 100%;  
+    }       
+
+    .result-container {
+        width: 100%   
+    }
+
+    table{
+        margin-left: 13px;
+        margin-top: 3px;
+    }
+
+    footer {
+        font-size: 12px;
+        text-align: center;
+        
+    }
+    
